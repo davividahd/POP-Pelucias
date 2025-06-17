@@ -125,7 +125,7 @@ const Pelucias =[
           "categoria": "Minions",
           "preco": 39.99,
           "descricao": "Pelúcia do Minion mais engraçado, ideal para os fãs de Meu Malvado Favorito.",
-          "imagem": "https://www.exemplo.com/imagens/minions.jpg",
+          "imagem": "https://images.tcdn.com.br/img/img_prod/460977/boneco_pelucia_minion_kevin_minions_meu_malvado_favorito_filme_65cm_mkp_131195_1_e817a1c2599d10b9ceb410a047bb050c.jpg",
           "estoque": 50,
           "tamanho": "P"
         },
@@ -175,7 +175,7 @@ const Pelucias =[
           "categoria": "Shrek",
           "preco": 69.99,
           "descricao": "Pelúcia do Shrek, o ogro mais querido da animação.",
-          "imagem": "https://www.exemplo.com/imagens/shrek.jpg",
+          "imagem": "https://photos.enjoei.com.br/pelucia-shrek/1200xN/czM6Ly9waG90b3MuZW5qb2VpLmNvbS5ici9wcm9kdWN0cy8xMDQwNDYvNDFhZjNmYTBlZGMyMTMwNDdjZWE4ZDk3ZGNlMWQzYmYuanBn",
           "estoque": 14,
           "tamanho": "M"
         },
@@ -201,4 +201,5 @@ const Pelucias =[
         }
       ]
 
+  export default Pelucias;
   
