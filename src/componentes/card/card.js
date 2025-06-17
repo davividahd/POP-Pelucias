@@ -1,27 +1,17 @@
-import { StyleSheet } from 'react-native';
+import { Image, Text, View } from 'react-native';
+import styles from './stylecard.js';  
 
- const styles = StyleSheet.create({
+export default function Card({ nome, imagem, descricao, categoria, preco, estoque, tamanho }) {
+  return (
+    <View >
+      <Image style={styles.imagecard} source={{ uri: (imagem) }} />
+      <Text style={styles.textcard}>{nome}</Text>
+      <Text style={styles.textcard} >{descricao}</Text>
+      <Text style={styles.textcard}>{categoria}</Text>
+      <Text style={styles.textcard}>{preco}</Text>
+      <Text style={styles.textcard}>{estoque}</Text>
+      <Text style={styles.textcard} > {tamanho}</Text>
 
-    
-    imagecard: {
-
-        padding: 10, 
-        marginVertical: 8,
-        borderRadius: 8,
-         width: 90, 
-        height: 120,
-         resizeMode: 'cover'
-    },
-
-   textcard:{
-         textAlign: 'center',
-         fontSize: 15,
-        color: "white",
-        fontWeight: "bold",
-        width: 100,
-
-
-    },
-})
-
-    export default styles;
+    </View>
+  );
+}
