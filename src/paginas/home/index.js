@@ -3,38 +3,40 @@ import Cabecalho from '../../componentes/cabeçalho/index.js';
 import Pesquisa from '../../componentes/pesquisa/pesquisa.js';
 import Banner from '../../componentes/banner/banner.js';
 import Card from '../../componentes/card/card.js';
-import DATA from '../../../DATA/Pelucias.js';
-import Rotas from '../rotas/index.js';
+import Pelucias from '../../../DATA/Pelucias.js';
+
 const imagem = Math.floor(Math.random() * 4 + 1);
 
 export default function HOME() {
   return (
+
     <View style={styles.container}>
-     {/* <Rotas/>   */}
+      {/* <Rotas/>   */}
       <Cabecalho />
 
-      
-      
-          <Pesquisa />
-          <Banner />
 
-          <View style={{ width: '90%' }}>
-            <FlatList
-              data={DATA}
-              horizontal={true}
-              showsHorizontalScrollIndicator={true}
-              keyExtractor={(item) => item.id}
-              renderItem={({ item }) => (
-                <Card
-                   nome={item.nome}
-                   descricao={item.descricao}
-                   imagem={item.imagem}
-                />
-              )}
+
+      <Pesquisa />
+      <Banner />
+
+      <View style={{ width: '90%' }}>
+        <FlatList
+          data={Pelucias}
+          horizontal={true}
+          showsHorizontalScrollIndicator={true}
+          keyExtractor={(item) => item.id}
+          renderItem={({ item }) => (
+            <Card
+              nome={item.nome}
+              imagem={item.imagem}
+              preco={item.preco}
+
             />
-          </View>
-        
-    
+          )}
+        />
+      </View>
+
+
     </View>
   );
 }
@@ -42,7 +44,7 @@ export default function HOME() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#141a29',
+    backgroundColor: '#9700FC',
     alignItems: 'center',
     justifyContent: 'center',
 
@@ -50,8 +52,11 @@ const styles = StyleSheet.create({
   },
   scrollContainer: {
     alignItems: 'center',
+
     paddingBottom: 20,
+
   },
 
 
 });
+
